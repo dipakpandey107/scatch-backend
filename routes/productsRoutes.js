@@ -6,4 +6,4 @@ router.get('/', (req, res) => {
     res.send(' Hey its a product route');
 });
 
-module.exports = router;
+module.exports = router;    
