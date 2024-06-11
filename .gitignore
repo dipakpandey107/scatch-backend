@@ -1,4 +1,9 @@
-# node_modules
-# .env
-# .gitignore
-# package.json
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore environment variable files
+.env
+
+# Ignore the .gitignore file itself
+.gitignore

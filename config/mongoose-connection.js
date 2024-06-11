@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
+const config = require('config');
+const dbgr = require('debug')('development:mongoose');
 
-mongoose.connect("mongodb://127.0.0.1:27017/scatch", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(config.get('MONGODB_URI'), {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
 .then(function() {
-    console.log("Connected to MongoDB");
+    dbgr('Connected to MongoDB');
 })
 .catch(function(err) {
-    console.log("Error connecting to MongoDB", err);
+    console.log('Error connecting to MongoDB', err);
 });
 
 module.exports = mongoose.connection;
