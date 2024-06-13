@@ -6,6 +6,9 @@ const path = require('path');
 const ownersRoutes = require('./routes/ownersRoutes.js');
 const usersRoutes = require('./routes/usersRoutes.js');
 const productsRoutes = require('./routes/productsRoutes.js');
+const indexRouter = require("./routes/index.js");
+
+require("dotenv").config();
 
 // Ensure the database connection is imported and initialized
 const db = require("./config/mongoose-connection.js");
